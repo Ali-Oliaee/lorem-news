@@ -31,7 +31,7 @@ function SignupPage() {
                     <Input.Password placeholder="confirm password"/>
                 </Form.Item>
                 <a href="#">forot your passwor?</a>
-                <Button htmlType="submit" className="submit-button" size="large">
+                <Button htmlType="submit" block className="submit-button" size="large">
                     Signup
                 </Button>
                 </Form>
