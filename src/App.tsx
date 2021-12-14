@@ -4,13 +4,13 @@ import { LoginWrapper } from "./components/login-wrapper"
 import { LoginPage } from "./pages/login-page"
 import { SignupPage } from "./pages/signup"
 import { Header } from "./components/header"
-import 'antd/dist/antd.css';
 import DashboardPage from "./pages/dashboard/dashboard"
+import 'antd/dist/antd.css';
 
 const App = function () {
   return (
     <div className="App">
-      <DashboardPage/>
+      <LoginPage/>
     </div>
 
   )

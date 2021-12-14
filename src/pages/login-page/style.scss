@@ -1,43 +1,36 @@
 .login-form-container {
-  max-width: 15em;
+  width: 100%;
+  max-width: 30em;
   border: 1px solid black;
   border-radius: 5px;
   background-color: #fff;
-  padding: 1em;
+  padding: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
+  h2 {
+    margin: 0;
+  }
+
   .login-form {
-    padding: 1em;
     width: 100%;
+    max-width: 30em;
     background-color: #fff;
+    margin: 1em auto;
 
     .input-container {
       width: 100%;
-      border: 1px solid;
-      margin: 0.5em auto;
+      margin: 1em 0;
+    }
 
-      input {
-        border: 0;
-        outline: 0;
-        padding: 0.8em;
+    .submit-button {
+      background-color: #003566;
+      span {
+        color: #ffc300;
       }
     }
-    a {
-      color: #888;
-      align-self: flex-start;
-      font-size: 0.8em;
-    }
-    .submit-button {
-      width: 100%;
-      cursor: pointer;
-    }
-  }
-
-  h5 {
-    margin: 0;
   }
 
   .signup-link {

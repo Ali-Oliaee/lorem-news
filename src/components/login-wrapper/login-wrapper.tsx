@@ -6,9 +6,12 @@ import './style.scss'
 function LoginWrapper({children}: any) {
     return (
         <div className="login-wrapper">
-            <Header/>
-            {children}
-            <Footer/>
+            <div className="background"></div>
+            <div className="login-wrapper-content">
+                <Header/>
+                {children}
+                <Footer/>
+            </div>
         </div>
     )
 }
