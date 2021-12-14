@@ -7,7 +7,7 @@ function LoginPage() {
     return (
        <LoginWrapper>
            <section className="login-form-container">
-               <h5>Login Form</h5>
+               <h2>Login Form</h2>
                 <Form className="login-form">
                 <Form.Item className="input-container">
                     <Input placeholder="email"/>
@@ -16,7 +16,7 @@ function LoginPage() {
                     <Input.Password placeholder="password"/>
                 </Form.Item>
                 <a href="#">forot your passwor?</a>
-                <Button htmlType="submit" className="submit-button" size="large">
+                <Button htmlType="submit" className="submit-button" block size="large">
                     Login
                 </Button>
                 </Form>

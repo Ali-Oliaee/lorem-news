@@ -1,7 +1,7 @@
 import React from 'react'
 import {Button, Select} from 'antd'
-import './style.scss'
 import { SwitchLanguage } from '../../switch-language'
+import './style.scss'
 
 function Header() {
 

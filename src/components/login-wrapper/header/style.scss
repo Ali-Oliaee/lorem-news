@@ -7,17 +7,15 @@
 
   .logo {
     h4 {
-      color: rgb(212, 163, 72);
-      font-size: 1.4em;
+      color: #0f2c67;
+      font-size: 1.5em;
+      font-weight: bold;
     }
   }
 
   .language-container {
     display: flex;
-    .language-select {
-      display: inline;
-      height: 100%;
-      margin: 0 1em;
-    }
+    align-items: center;
+    justify-content: center;
   }
 }
