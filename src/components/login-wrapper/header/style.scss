@@ -1,0 +1,23 @@
+.login-wrapper-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 5em;
+
+  .logo {
+    h4 {
+      color: rgb(212, 163, 72);
+      font-size: 1.4em;
+    }
+  }
+
+  .language-container {
+    display: flex;
+    .language-select {
+      display: inline;
+      height: 100%;
+      margin: 0 1em;
+    }
+  }
+}
