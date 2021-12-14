@@ -1,0 +1,26 @@
+.main-logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.8em;
+
+  .first-letter {
+    color: #fff;
+    display: inline-block;
+    padding: 0 0.2em;
+    animation-name: rotateLogo;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 40% 40%;
+  }
+}
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(50deg);
+  }
+  50% {
+    transform: rotate(-50deg);
+  }
+  100% {
+    transform: rotate(50deg);
+  }
+}

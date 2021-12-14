@@ -1,27 +1,12 @@
 .login-wrapper {
-  width: 100%;
+  background: url("../../assets/image/background.jpg");
   display: flex;
-  flex-direction: row-reverse;
+  width: 100%;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  .login-wrapper-content {
-    display: flex;
-    width: 50%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    min-height: 100vh;
-    overflow: hidden;
-    padding: 0 2em;
-  }
-  .background {
-    width: 50%;
-    height: 100%;
-    min-height: 100vh;
-    background: url("../../assets/image/login-background.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
+  justify-content: space-between;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
 }

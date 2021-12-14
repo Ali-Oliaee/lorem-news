@@ -1,35 +1,76 @@
 .signup-form-container {
+  max-width: 40%;
   width: 100%;
-  max-width: 30em;
   border: 1px solid black;
+  height: 100%;
+  align-self: flex-start;
   border-radius: 5px;
   padding: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  backdrop-filter: blur(11px);
+  position: absolute;
 
-  .signup-form {
-    width: 100%;
-    max-width: 30em;
-    margin: 1em auto;
-
-    .input-container {
-      width: 100%;
-      margin: 1em 0;
-    }
-
-    .submit-button {
-      background-color: #0f2c67;
-      span {
-        color: #f4e185;
-      }
-    }
+  .signup-description {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
   }
 
-  .login-link {
-    color: #777;
-    font-size: 0.8em;
-    margin: 0;
+  section {
+    width: 100%;
+    max-width: 30em;
+
+    .signup-form {
+      width: 100%;
+      max-width: 30em;
+      margin: 1em auto;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+
+      .input-container {
+        width: 100%;
+        margin: 1em 0;
+        .username-input,
+        .email-input,
+        .password-input {
+          padding: 0.6em;
+        }
+        input::placeholder {
+          color: #555;
+        }
+      }
+      .forgot-password {
+        align-self: flex-start;
+        color: #444;
+        font-weight: bold;
+      }
+
+      .submit-button {
+        background-color: #242423;
+        span {
+          color: #f5cb5c;
+          font-weight: bold;
+        }
+      }
+    }
+    .login-link {
+      color: #000;
+      font-size: 0.8em;
+      width: 100%;
+      text-align: center;
+
+      a {
+        padding: 0 0.8em;
+        align-self: flex-start;
+        color: #fff;
+        font-weight: bold;
+      }
+    }
   }
 }
