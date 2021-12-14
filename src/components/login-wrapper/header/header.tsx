@@ -1,6 +1,7 @@
 import React from 'react'
 import {Button, Select} from 'antd'
 import './style.scss'
+import { SwitchLanguage } from '../../switch-language'
 
 function Header() {
 
@@ -11,14 +12,7 @@ function Header() {
             </div>
             <div className="language-container">
             <span>Language: </span>
-                <Select defaultValue="EN" className="language-select"  bordered={false}
-                showArrow={false}
-                dropdownMatchSelectWidth={false}
-                style={{width: 80}}
-                >
-                    <Select.Option value="en" key="en">EN</Select.Option>
-                    <Select.Option value="fa" key="fa">fa</Select.Option>
-                </Select>
+                <SwitchLanguage/>
             </div>
                 
         </div>
