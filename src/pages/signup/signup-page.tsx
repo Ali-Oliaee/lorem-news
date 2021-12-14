@@ -69,7 +69,6 @@ function SignupPage() {
                 >
                     <Input.Password placeholder="confirm password" className="password-input"/>
                 </Form.Item>
-                <a href="#" className="forgot-password">forot your password?</a>
                 <Button htmlType="submit" block className="submit-button" size="large">
                     Sign Up
                 </Button>

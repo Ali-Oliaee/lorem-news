@@ -10,7 +10,7 @@ import 'antd/dist/antd.css';
 const App = function () {
   return (
     <div className="App">
-      <SignupPage/>
+      <LoginPage/>
     </div>
 
   )

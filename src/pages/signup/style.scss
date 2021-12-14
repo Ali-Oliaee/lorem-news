@@ -1,7 +1,6 @@
 .signup-form-container {
   max-width: 40%;
   width: 100%;
-  border: 1px solid black;
   height: 100%;
   align-self: flex-start;
   border-radius: 5px;
@@ -44,11 +43,6 @@
         input::placeholder {
           color: #555;
         }
-      }
-      .forgot-password {
-        align-self: flex-start;
-        color: #444;
-        font-weight: bold;
       }
 
       .submit-button {

@@ -1,42 +1,75 @@
 .login-form-container {
   width: 100%;
-  max-width: 30em;
-  border: 1px solid black;
+  max-width: 40%;
   border-radius: 5px;
-  background-color: #fff;
+  position: absolute;
   padding: 2em;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  backdrop-filter: grayscale(0.5) opacity(0.8);
+  align-self: flex-start;
+  backdrop-filter: blur(11px);
 
-  h2 {
-    margin: 0;
+  .login-description {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
   }
 
-  .login-form {
+  section {
     width: 100%;
     max-width: 30em;
-    background-color: #fff;
-    margin: 1em auto;
 
-    .input-container {
+    .login-form {
       width: 100%;
-      margin: 1em 0;
-    }
+      max-width: 30em;
+      margin: 1em auto;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
 
-    .submit-button {
-      background-color: #0f2c67;
-      span {
-        color: #f4e185;
+      .input-container {
+        width: 100%;
+        margin: 1em 0;
+        .username-input,
+        .email-input,
+        .password-input {
+          padding: 0.6em;
+        }
+        input::placeholder {
+          color: #555;
+        }
+      }
+
+      .forgot-password {
+        color: #222;
+        align-self: flex-start;
+      }
+
+      .submit-button {
+        background-color: #242423;
+        span {
+          color: #f5cb5c;
+          font-weight: bold;
+        }
       }
     }
-  }
+    .signup-link {
+      color: #000;
+      font-size: 0.8em;
+      width: 100%;
+      text-align: center;
 
-  .signup-link {
-    color: #777;
-    font-size: 0.8em;
-    margin: 0;
+      a {
+        padding: 0 0.8em;
+        align-self: flex-start;
+        color: #fff;
+        font-weight: bold;
+      }
+    }
   }
 }
