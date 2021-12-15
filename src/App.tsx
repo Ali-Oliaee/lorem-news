@@ -7,10 +7,12 @@ import { Header } from "./components/header"
 import DashboardPage from "./pages/dashboard/dashboard"
 import 'antd/dist/antd.css';
 
-const App = function () {
+const App = () => {
   return (
     <div className="App">
-      <LoginPage/>
+      {/* <LoginPage/> */}
+      {/* <SignupPage/> */}
+      <DashboardPage/>
     </div>
 
   )
