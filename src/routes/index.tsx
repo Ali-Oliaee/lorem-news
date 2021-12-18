@@ -4,7 +4,7 @@ import {
     Routes,
     Route
 } from 'react-router-dom'
-import { LoginPage, SignupPage, DashboardPage, NewsPage } from  "../pages";
+import { LoginPage, SignupPage, DashboardPage, NewsPage, NotFoundPage } from  "../pages";
 
 export const MainRouter = () => {
     return(
@@ -18,6 +18,7 @@ export const MainRouter = () => {
                 <Route path="profile" element={<DashboardPage/>}/>
                 <Route path="news" element={<NewsPage/>} />
             </Route>
+            <Route path="*" element={<NotFoundPage/>} />
         </Routes>
     </Router>
     )
