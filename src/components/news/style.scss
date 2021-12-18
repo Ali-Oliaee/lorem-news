@@ -1,0 +1,21 @@
+.news-item {
+  max-width: 28em;
+  width: 100%;
+  margin: 1em;
+  padding: 1em;
+  background-color: rgb(214, 214, 214);
+
+  img {
+    width: 100%;
+  }
+
+  .news-title {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .news-description {
+    font-size: 1.2em;
+    width: 80%;
+  }
+}
