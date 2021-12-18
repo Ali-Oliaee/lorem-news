@@ -1,22 +1,26 @@
 import React from "react"
-import {Button} from 'antd'
-import { LoginWrapper } from "./components/login-wrapper"
-import { LoginPage } from "./pages/login"
-import { SignupPage } from "./pages/signup"
-import { Header } from "./components/header"
-import DashboardPage from "./pages/dashboard/dashboard"
+import { MainRouter } from "./routes"
+import { QueryClient, QueryClientProvider } from "react-query";
 import 'antd/dist/antd.css';
-import { NewsPage } from "./pages/news"
+
+const queryFn = ({queryKey}: any) => (localStorage.getItem('email') && localStorage.getItem('password'))
+
+
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      queryFn,
+      retry: 2,
+    }
+  }
+})
 
 const App = () => {
-  return (
-    <div className="App">
-      <LoginPage/> 
-      <SignupPage/>
-      <DashboardPage/>
-      <NewsPage/>
-    </div>
-
+  return ( 
+    <QueryClientProvider client={queryClient}>
+      <MainRouter/>
+   </QueryClientProvider>
   )
 }
 

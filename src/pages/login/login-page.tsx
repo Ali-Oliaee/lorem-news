@@ -3,9 +3,18 @@ import {Button, Form, Input, Divider} from 'antd'
 import { LoginWrapper } from '../../components/login-wrapper'
 import { Logo } from '../../components/logo'
 import { GoogleButton } from '../../components/google-button'
+import { Link, useNavigate } from 'react-router-dom'
 import './style.scss'
 
 function LoginPage() {
+    const navigate = useNavigate()
+    const login = (email: any, password : any) => {
+        localStorage.setItem('email', email)
+        localStorage.setItem('password', password)
+
+        navigate('/profile')
+    }
+
     return ( 
         <LoginWrapper>
         <div className="login-form-container">
@@ -14,7 +23,7 @@ function LoginPage() {
        <section>
       <GoogleButton/>
        <Divider>or</Divider>
-        <Form className="login-form" onFinish={() => console.log('ckdjsn') }
+        <Form className="login-form" onFinish={(values) => login(values.email, values.password) }
             name="login-form" >
         <Form.Item className="input-container"
         name="email"
@@ -40,13 +49,13 @@ function LoginPage() {
         ]}>
             <Input.Password placeholder="password" className="password-input"/>
         </Form.Item>
-        <a href="#" className="forgot-password">forot your password?</a>
+        <Link to="/notfound" className="forgot-password">forot your password?</Link>
         <Button htmlType="submit" block className="submit-button" size="large">
-            Sign Up
+            Login
         </Button>
         </Form>
         <p className="signup-link">Dont have account?
-            <a href="./signup" >Sign up</a>
+            <Link to="/auth/signup">signup</Link>
         </p>
         </section>
    </div>

@@ -1,38 +1,46 @@
 import React from 'react'
 import { Input, Dropdown, Menu } from 'antd'
+import { Link, useNavigate } from 'react-router-dom'
 import { SwitchLanguage } from '../switch-language'
 import './style.scss'
 
-const menu = (
+
+const menu = (navigate: any) => {
+  return (
     <Menu>
       <Menu.Item key="0">
-        <a href="#">Dashboard</a>
+        <Link to="/profile">dashboard</Link>
       </Menu.Item>
       <Menu.Item key="1">
-        <a href="#">News</a>
+        <Link to="/news">News</Link>
       </Menu.Item>
-      <Menu.Item key="2">
-        <a href="#">Log out</a>
+      <Menu.Item key="2" onClick={() => {
+        localStorage.clear()
+        navigate('/auth/login')
+      }}>
+        Logout
       </Menu.Item>
     </Menu>
-  );
+  )
+};
 
 function Header() {
-    return (
-        <div className="dashboard-header">
-          <div className="header-search-container">
-            <Input.Search className="header-search-input" placeholder="search news"/>
-          </div>
-            <div className="header-profile-dropdown">
-            <SwitchLanguage/>
-                <Dropdown overlay={menu} trigger={['click']}>
-                    <a className="ant-dropdown-link">
-                        menu
-                    </a>        
-                </Dropdown>
-            </div>
-        </div>
-    )
+  const navigate = useNavigate()
+  return (
+    <div className="dashboard-header">
+      <div className="header-search-container">
+        <Input.Search className="header-search-input" placeholder="search news" />
+      </div>
+      <div className="header-profile-dropdown">
+        <SwitchLanguage />
+        <Dropdown overlay={() => menu(navigate)} trigger={['click']}>
+          <a className="ant-dropdown-link">
+            menu
+          </a>
+        </Dropdown>
+      </div>
+    </div>
+  )
 }
 
 export default Header

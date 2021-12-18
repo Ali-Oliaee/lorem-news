@@ -1,11 +1,19 @@
 import React from 'react'
 import {Form, Input,Divider, Button} from 'antd'
+import { Link, useNavigate } from 'react-router-dom'
 import { LoginWrapper } from '../../components/login-wrapper'
 import { Logo } from '../../components/logo'
 import { GoogleButton } from '../../components/google-button'
 import './style.scss'
 
 function SignupPage() {
+    const navigate = useNavigate()
+    const signup = (email: any, password : any) => {
+        localStorage.setItem('email', email)
+        localStorage.setItem('password', password)
+        navigate('/profile')
+    }
+
     return (
         <LoginWrapper>
                 <div className="signup-form-container">
@@ -14,17 +22,9 @@ function SignupPage() {
                <section>
               <GoogleButton/>
                <Divider>or</Divider>
-                <Form className="signup-form" onFinish={() => console.log('ckdjsn') }
+                <Form className="signup-form" onFinish={(values) =>  signup(values.email, values.password)}
                     name="signup-form"
                 >
-                <Form.Item className="input-container" name="username"
-                rules={[{
-                    required: true,
-                    message:'this field is required'
-                }]}
-                >
-                    <Input placeholder="username" className="username-input"/>
-                </Form.Item>
                 <Form.Item className="input-container"
                 name="email"
                 rules={[
@@ -58,14 +58,7 @@ function SignupPage() {
                 {
                     min: 8,
                     message: 'Enter 8 charcters'
-                },
-                ({ getFieldValue }) => ({
-                    validator(_, value) {
-                      if (!value || getFieldValue('password') !== value) 
-                      return Promise.reject(new Error('Two passwords does not match'));
-                    },
-                  }),
-                ]}
+                }]}
                 >
                     <Input.Password placeholder="confirm password" className="password-input"/>
                 </Form.Item>
@@ -74,7 +67,7 @@ function SignupPage() {
                 </Button>
                 </Form>
                 <p className="login-link">Already have an account?
-                    <a href="./login" >login</a>
+                    <Link to="/auth/login">Login</Link>
                 </p>
                 </section>
            </div>
