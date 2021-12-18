@@ -4,4 +4,23 @@
   min-height: 100vh;
   background: url(../../assets/image/notfound-background.jpg);
   overflow: hidden;
+  text-align: center;
+  padding-top: 2em;
+
+  h1 {
+    font-size: 7em;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 3em;
+  }
+  h5 {
+    font-size: 2em;
+  }
+  .button {
+    background: rgba(170, 127, 77, 0.603);
+    span {
+      color: black;
+    }
+  }
 }
