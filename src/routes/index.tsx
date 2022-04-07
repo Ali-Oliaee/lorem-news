@@ -10,8 +10,9 @@ export const MainRouter = () => {
     return(
     <Router>
         <Routes>
-            <Route index element={<LoginPage/>} />
-            <Route path="signup"  element={<SignupPage/>}/>
+            <Route path="/lorem-news" element={<LoginPage/>} />
+            <Route path="/" element={<LoginPage/>} />
+            <Route path="/signup"  element={<SignupPage/>}/>
             <Route path="/news" element={<NewsPage/>} />
             <Route path="*" element={<NotFoundPage/>} />
         </Routes>
