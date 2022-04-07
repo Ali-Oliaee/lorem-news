@@ -6,10 +6,12 @@ import './style.scss'
 
 function GoogleButton() {
     return (
-        <Button block className="google-button">
-        <GoogleIcon/>
-        Sign up with Google account
-        </Button>
+        <>
+            <Button className="google-button" size='large'>
+            <GoogleIcon/>
+                Sign up with Google account
+            </Button>
+        </>
     )
 }
 
