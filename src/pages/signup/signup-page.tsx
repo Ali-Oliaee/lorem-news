@@ -67,7 +67,7 @@ function SignupPage() {
                 </Button>
                 </Form>
                 <p className="login-link">Already have an account?
-                    <Link to="/auth/login">Login</Link>
+                    <Link to="/">Login</Link>
                 </p>
                 </section>
            </div>

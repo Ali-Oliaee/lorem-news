@@ -7,8 +7,8 @@ const NotFoundPage = () => {
     const navigate = useNavigate()
     const redirectUser = () => {
         localStorage.getItem('email') ?
-        navigate('/profile') :
-        navigate('/auth/login')
+        navigate('/news') :
+        navigate('/')
     }
 
     return(
