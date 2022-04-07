@@ -1,5 +1,7 @@
 # simple news website pages 
 
+![phone book](/src/assets/image/screenshot.png?raw=true)
+
 ant design library - Faker js - i18next
 
 # Getting Started with Create React App
